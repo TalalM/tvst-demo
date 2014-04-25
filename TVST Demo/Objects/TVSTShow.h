@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSArray *comments;
 
+@property (nonatomic, readonly) NSURL *imgUrl;
+
 - (void) getDataOnSuccess:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *result))success onFailure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
 - (void) getCommentsAtPage:(NSInteger) page limit:(NSInteger) limit OnSuccess:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *result))success onFailure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;

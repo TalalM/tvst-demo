@@ -16,6 +16,11 @@
     return [NSString stringWithFormat:@"Show #%@ : %@", self.showID, self.name];
 }
 
+- (NSURL *) imgUrl
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://api.tozelabs.com/v2/show/%@/poster.4", self.showID]];
+}
+
 - (void) getDataOnSuccess:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *result))success onFailure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure
 {
     NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx

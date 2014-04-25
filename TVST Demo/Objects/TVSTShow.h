@@ -20,4 +20,6 @@
 
 - (void) getCommentsAtPage:(NSInteger) page limit:(NSInteger) limit OnSuccess:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *result))success onFailure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
++ (void) getMostFollowedAtPage:(NSInteger) page limit:(NSInteger) limit OnSuccess:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *result))success onFailure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
+
 @end
